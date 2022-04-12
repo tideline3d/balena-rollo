@@ -1,4 +1,4 @@
-name: balenaPrint
+name: balena-rollo
 description: >-
   Add wireless and AirPrint capability to legacy 
   USB-enabled printers, powered by a Raspberry Pi.
@@ -15,12 +15,12 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/willswire/balenaPrint'
+      url: 'https://github.com/tideline3d/balena-rollo'
   logo:
     type: blob.asset
     data:
       url: >-
-        https://raw.githubusercontent.com/willswire/balenaPrint/master/logo.png
+        https://raw.githubusercontent.com/tideline3d/balena-rollo/master/logo.png
 data:
   defaultDeviceType: raspberrypi3
   supportedDeviceTypes:
