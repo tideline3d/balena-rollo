@@ -18,6 +18,10 @@ RUN install_packages \
 
 # Add script
 COPY run.sh /
+COPY rollo/install.run / 
+
+#Install Rollo Drivers
+RUN sh install.run
 
 # Enable USB devices
 ENV UDEV 1
