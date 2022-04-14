@@ -1,23 +1,5 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%:build
+FROM drpsychick/airprint-bridge:latest
 
-# Install the packages we need. Avahi will be included
-RUN install_packages \
-    cups \
-    iptables \
-    avahi-daemon \
-    dbus \
-    libnss-mdns \
-    foomatic-db-compressed-ppds \
-    printer-driver-gutenprint \
-    printer-driver-brlaser \
-    hplip \
-    hplip-data \
-    libcups2-dev \
-    build-essential 
-
-
-# Add script
-COPY run.sh /
 COPY rollo/install.run / 
 
 #Install Rollo Drivers
@@ -25,12 +7,3 @@ RUN sh install.run
 
 # Enable USB devices
 ENV UDEV 1
-
-# Add cupsd.conf file
-COPY cupsd.conf /etc/cups/cupsd.conf
-
-# Link DBUS file where hp-setup expects it
-RUN ln -s /host/run/dbus /var/run/dbus
-
-#Run Script
-CMD ["bash", "run.sh"]
