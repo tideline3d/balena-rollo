@@ -17,11 +17,11 @@ services:
       io.balena.features.dbus: '1'
       io.balena.features.supervisor-api: '1'
       io.balena.features.balena-api: '1'
-  mdns-publisher:
-    build: ./mdns-publisher
-    restart: always
-    environment:
-      DBUS_SYSTEM_BUS_ADDRESS: 'unix:path=/host/run/dbus/system_bus_socket'
-    labels:
-      io.balena.features.dbus: '1'
-      io.balena.features.supervisor-api: '1'
+  # mdns-publisher:
+  #   build: ./mdns-publisher
+  #   restart: always
+  #   environment:
+  #     DBUS_SYSTEM_BUS_ADDRESS: 'unix:path=/host/run/dbus/system_bus_socket'
+  #   labels:
+  #     io.balena.features.dbus: '1'
+  #     io.balena.features.supervisor-api: '1'
